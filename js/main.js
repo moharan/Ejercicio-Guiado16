@@ -19,5 +19,6 @@ const Charmander = new Pokemon("Charmander", "rojo",20);
 
 Pikachu.atacar(Charmander);
 console.log(Charmander.vida)
+console.log(Pikachu.nombre + Pikachu.color + Pikachu.vida)
 document.write("<h2><b>" + Charmander.nombre + " </b>" + Charmander.color + " " + Charmander.vida + "</h2>")
 document.write("<h2><b>" + Pikachu.nombre + " </b>" + Pikachu.color + " " + Pikachu.vida + "</h2>")
