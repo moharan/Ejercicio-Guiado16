@@ -1,11 +1,31 @@
 body {
-	background-color: #fff;
+	background-image: url(../images/fondo.jpg);
+	color: black;
 	text-align: center;
 	margin: auto;
 }
 h2 {
-	color: #666;
+	color: #fff;
 }
 b {
-	color: purple;
+	color: red;
+}
+.contenedor{
+	background: #000;
+	opacity: 0.9;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	padding: 20px;
+	margin: auto;
+	border-radius:20px; 
+	-moz-border-radius:10px; /* Firefox */ 
+	-webkit-border-radius:10px; /* Safari y Chrome */ 
+}
+#mensaje {
+	padding-top: 10px;
+	margin: auto;
+	background-color: red;
+	color: white;
+	width: 50%;
 }

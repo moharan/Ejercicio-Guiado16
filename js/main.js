@@ -12,13 +12,35 @@ function Pokemon(nombre,color,poderDeAtaque){
 	}
 	this.atacar = function(pokemon) {
 		pokemon.vida = pokemon.vida - this.poderDeAtaque;
+		return pokemon.vida;
 	}
 }
-const Pikachu = new Pokemon("Pikachu","amarillo",100);
-const Charmander = new Pokemon("Charmander", "rojo",20);
+const pikachu = new Pokemon("Pikachu","amarillo",70);
+const charmander = new Pokemon("Charmander", "rojo",20);
+const onix = new Pokemon("Onix", "gris",100);
+const butterfree = new Pokemon("Butterfree", "blanco",5);
 
-Pikachu.atacar(Charmander);
-console.log(Charmander.vida)
-console.log(Pikachu.nombre + Pikachu.color + Pikachu.vida)
-document.write("<h2><b>" + Charmander.nombre + " </b>" + Charmander.color + " " + Charmander.vida + "</h2>")
-document.write("<h2><b>" + Pikachu.nombre + " </b>" + Pikachu.color + " " + Pikachu.vida + "</h2>")
+var competidores =[pikachu, charmander, onix, butterfree];
+
+competidores.forEach(function(element){
+	var res = document.getElementById("usuario1");// valor
+	res.innerHTML += "<option value =" + element.nombre + ">" + element.nombre + "</option>";
+	var res2 = document.getElementById("usuario2");// valor
+	res2.innerHTML += "<option value =" + element.nombre + ">" + element.nombre + "</option>";
+});
+
+function Pelear(){
+	alert("Peleando");
+	var eleccion1 = document.getElementById("usuario1").value;
+	var eleccion2 = document.getElementById("usuario2").value;
+	var res = document.getElementById("mensaje");
+	if (eleccion1 === eleccion2) {
+        alert('Elige Adversarios Diferentes');
+    } else {
+    var ataque = 100 - eleccion2.poderDeAtaque;
+	}
+	return res.innerHTML = eleccion1 + " ataco " + eleccion2 + "<br>" + eleccion2 + " tiene " + ataque + " de vida restantes";
+	//document.getElementById("mensaje").innerHTML += eleccion1 + " ataco " + eleccion2;	
+}
+
+
